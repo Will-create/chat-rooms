@@ -68,8 +68,7 @@ $(document).ready(function(){
             socket.emit('rooms');
         },1000);
         $('#send-message').focus();
-
-        $('#send-form').sudmit(function(){
+        $('#send-form').submit(function(){
             processUserInput(chatApp,socket);
             return false;
         })
