@@ -6,7 +6,7 @@ return $('<div></div>').text(message);
 function divSystemContentElement(message){
     return $('<div></div>').html('<i>'+message+'</i>');
 }
-function processUserInput(chatApp,socket){
+function processUserInput(chatApp){
     var message = $('#send-message').val();
     var systemMessage;
     if(message.charAt(0) == '/'){
@@ -69,7 +69,7 @@ $(document).ready(function(){
         },1000);
         $('#send-message').focus();
         $('#send-form').submit(function(){
-            processUserInput(chatApp,socket);
+            processUserInput(chatApp);
             return false;
         })
 })
